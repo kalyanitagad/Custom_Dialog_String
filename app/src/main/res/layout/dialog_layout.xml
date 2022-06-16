@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDialog"
+        android:text=""
+        android:textSize="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stringRadioGroup"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txtDialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        tools:ignore="MissingConstaint">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobtnuppercase"
+            android:layout_marginLeft="10dp"
+            android:text="Uppercase"
+            android:textSize="13dp"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobtnlowercase"
+            android:layout_marginLeft="20dp"
+            android:text="lowercase"
+            android:textSize="13dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobtnincapital"
+            android:layout_marginLeft="30dp"
+            android:text="Incapital"
+            android:textSize="15dp"
+            tools:ignore="InvalidId"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkreverse"
+        android:text="REVERSE"
+        app:layout_constraintTop_toBottomOf="@+id/stringRadioGroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="finish"
+        android:id="@+id/btnfinish"
+        app:layout_constraintLeft_toRightOf="@+id/checkreverse"
+        app:layout_constraintTop_toBottomOf="@+id/stringRadioGroup"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
